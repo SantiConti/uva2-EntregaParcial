@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</head>
+<body class="fondo-body">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info">      <!--NavBar sacada de boostrap-->
+            <div class="container-fluid">
+              <a class="navbar-brand text-white fs-3" href="index.html">HOME</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav fs-5">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="Avisos.html">Avisos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="SobreMi.html">Sobre mi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="Materias2025.html">Materias 2025</a>
+                  </li>
+                  <li class="nav-item"> 
+                    <a class="nav-link active text-dark" aria-current="page" href="#">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>       
+        
+        <div class="container mt-5 d-flex justify-content-center">              <!--Titulo de la pagina index-->
+            <div class="bg-info p-3 rounded text-center w-auto shadow">
+                <h1 class="display-5 fw-bold text-white m-0 titulo-sans">Contacto</h1>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">  <!-- Creo el formulario -->   
+            <form class="w-50">
+                <div class="mb-3 fs-5">
+                    <label for="exampleInputName1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                </div>
+
+                <div class="mb-3 fs-5">
+                    <label for="exampleInputName1" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                </div>
+
+                <div class="mb-3 fs-5">
+                    <label for="exampleInputEmail1" class="form-label">Direccion de correo electronico</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ejemplo@email.com" aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3 fs-5">
+                    <label for="exampleInputName1" class="form-label">Tema</label>
+                    <input type="text" class="form-control" placeholder="Tema" aria-label="Tema">
+                </div>
+                
+                <div class="mb-3 fs-5">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Escribi tu mensaje aca..." rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary fs-5">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-info mt-auto"> 
+      <div class="container text-white text-center py-3 ">
+        <p class="fs-4">Curso: 518378 | Prof: Patricia Litovicius</p>
+      </div>
+    </footer>
+</body>
+</html>
