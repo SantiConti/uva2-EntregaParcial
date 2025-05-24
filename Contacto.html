@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </head>
+
 <body class="fondo-body">
     <header>
         <nav class="navbar navbar-expand-lg bg-info">      <!--NavBar de boostrap adaptada para mi pag-->
@@ -43,36 +44,67 @@
 
     </header>
     <main>
+
         <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">  <!-- Creo el formulario -->   
-            <form class="w-50">
+            <form id= "formularioDeContacto" class="w-50">
                 <div class="mb-3 fs-5">
-                  <label for="exampleInputName1" class="form-label">Nombre</label>
-                  <input type="text" class="form-control shadow" placeholder="Nombre" aria-label="Nombre">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" id="nombre" class="form-control shadow" placeholder="Nombre" aria-label="Nombre">
                 </div>
 
                 <div class="mb-3 fs-5">
-                  <label for="exampleInputName1" class="form-label">Apellido</label>
-                  <input type="text" class="form-control shadow" placeholder="Apellido" aria-label="Apellido">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" id="apellido" class="form-control shadow" placeholder="Apellido" aria-label="Apellido">
                 </div>
 
                 <div class="mb-3 fs-5">
-                  <label for="exampleInputEmail1" class="form-label">Direccion de correo electronico</label>
-                  <input type="email" class="form-control shadow" id="exampleInputEmail1" placeholder="Ejemplo@email.com" aria-describedby="emailHelp">
+                  <label for="email" class="form-label">Direccion de correo electronico</label>
+                  <input type="text" class="form-control shadow" id="email" placeholder="Ejemplo@email.com" aria-describedby="emailHelp">
                 </div>
 
                 <div class="mb-3 fs-5">
-                  <label for="exampleInputName1" class="form-label">Tema</label>
-                  <input type="text" class="form-control shadow" placeholder="Tema" aria-label="Tema">
+                  <label for="tema" class="form-label">Tema</label>
+                  <input type="text" id="tema" class="form-control shadow" placeholder="Tema" aria-label="Tema">
                 </div>
                 
                 <div class="mb-3 fs-5">
-                  <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                  <textarea class="form-control shadow" id="exampleFormControlTextarea1" placeholder="Escribi tu mensaje aca..." rows="3"></textarea>
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control shadow" id="mensaje" placeholder="Escribi tu mensaje aca..." rows="3"></textarea>
                 </div>
 
               <button type="submit" class="btn btn-primary fs-5 shadow">Enviar</button>
             </form>
         </div>
+
+
+        <script>
+          document.getElementById("formularioDeContacto").addEventListener("submit", function (e) { 
+            e.preventDefault(); //para que el formulario no se envie con los datos por defecto
+        
+            // tomo los valores por la id
+            let nombre = document.getElementById("nombre").value.trim();
+            let apellido = document.getElementById("apellido").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let tema = document.getElementById("tema").value.trim();
+            let mensaje = document.getElementById("mensaje").value.trim();
+        
+          
+            let errores = []; //creo un array para los errores
+        
+            if (nombre == "") errores.push("El nombre es obligatorio."); //si lo errores se cumplen los meto en el array.
+            if (apellido == "") errores.push("El apellido es obligatorio.");
+            if (email == "" || !email.includes("@") || !email.includes(".")) errores.push("El correo electrónico no es válido.");
+            if (tema == "") errores.push("El tema es obligatorio.");
+            if (mensaje == "") errores.push("El mensaje es obligatorio.");
+        
+            if (errores.length > 0) {
+              alert("Por favor corregí los siguientes errores:\n\n" + errores.join("\n"));//muestro los errores en una alerta
+            } else {
+              alert("Gracias por tu contacto, " + nombre + ".\nEn breve te estaré respondiendo."); //si no hay errores muestro este mensaje
+              document.getElementById("formularioDeContacto").reset(); // limpio el formulario
+            }
+          });
+        </script>
     </main>
 
     <footer class="bg-info mt-auto">                              <!-- Footer -->
