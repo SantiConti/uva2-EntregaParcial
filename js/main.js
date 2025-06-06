@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const btnModoNoche = document.createElement("button");
-    btnModoNoche.textContent = "Modo noche";
+    btnModoNoche.textContent = "Modo oscuro";
     btnModoNoche.className = "btn btn-dark btn-sm text-white";
 
     const btnModoDia = document.createElement("button");
