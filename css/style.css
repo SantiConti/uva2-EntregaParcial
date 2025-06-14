@@ -1,14 +1,14 @@
 
 .titulo-sans {
     font-family: Arial, Helvetica, sans-serif;
-}
+}   
 
 .fondo-body{
     background-color:azure;
 }
 
 body.modo-oscuro {
-    background-color: #242424 !important;
+    background-color: #464646 !important;
     color: #ffffff !important;
 }
 
@@ -21,7 +21,7 @@ body.modo-oscuro .nav-link {
 }
 
 body.modo-oscuro table {
-    background-color: #1c1c1c;
+    background-color: #3d3d3d;
     color: white;
     
 }
@@ -50,7 +50,7 @@ body.modo-oscuro td {
 }
 
 body.modo-oscuro .nav{
-    color:#747474 !important
+    color:#8bccfb !important
 }
 
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web personal donde muestro mis materias, datos de contacto y más información sobre mí.">
     <title>Mi sitio web</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -47,12 +48,12 @@
         
         <div class="container mt-5 d-flex justify-content-center">              <!--Titulo de la tabla-->
             <div class="bg-info p-1 rounded-top text-center w-75 shadow">
-                <h3 class="text-white m-0 titulo-sans fs-3">Materias que curso</h3>
+                <h2 class="text-white m-0 titulo-sans fs-3" id="tituloMaterias">Materias que curso</h2>
             </div>
         </div>
 
         <div class="container d-flex justify-content-center align-items-center">  <!--Uso un "table" de boostrap para organizar las materias-->
-            <table class="table w-75 table-bordered border-info shadow fs-4">
+            <table class="table w-75 table-bordered border-info shadow fs-4" aria-labelledby="tituloMaterias">
                 <thead>
                     <tr>
                         <th scope="col">-</th>
